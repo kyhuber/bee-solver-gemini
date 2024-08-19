@@ -1,0 +1,79 @@
+/* Your CSS styles here */
+.hexagon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .hexagon {
+    width: 50px;
+    height: 29px;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+  }
+  
+  .hexagon:before {
+    bottom: 100%;
+    border-bottom: 15px solid #f0f0f0;
+  }
+  
+  .hexagon:after {
+    top: 100%;
+    border-top: 15px solid #f0f0f0;
+  }
+  
+  .hexagon:nth-child(4) { /* Center hexagon */
+    background-color: yellow; /* Change to your desired color */
+  }
+  
+  /* Adjust positioning for specific hexagons if needed */
+  .hexagon:nth-child(2),
+  .hexagon:nth-child(5) {
+    transform: translateY(-50%);
+  }
+  
+  .hexagon:nth-child(3),
+  .hexagon:nth-child(6) {
+    transform: translateX(50%) translateY(-25%);
+  }
+  
+  .hexagon:nth-child(7),
+  .hexagon:nth-child(8) {
+    transform: translateX(50%) translateY(25%);
+  }
+  
+  .hexagon input {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background: transparent;
+  }
+  
+  #find-solutions {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #results {
+    margin-top: 20px;
+  }
