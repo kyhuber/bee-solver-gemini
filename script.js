@@ -16,6 +16,7 @@ hexagons.forEach(input => {
 });
 
 findSolutionsButton.addEventListener('click', () => {
+    console.log('Button clicked');
   const letters = Array.from(document.querySelectorAll('.hexagon input')).map(input => input.value.toLowerCase());
   const centerLetter = letters.shift(); // Remove the center letter
 
